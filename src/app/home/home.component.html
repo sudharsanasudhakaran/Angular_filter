@@ -1,0 +1,22 @@
+<p>All country data</p>
+
+
+<div class="md-form mt-0">
+  <input class="form-control" [(ngModel)]="searchText" type="text" placeholder="Search" aria-label="Search">
+</div>
+<br>
+<br>
+
+
+<div *ngFor="let item of items | filter : searchText">
+  <div class="card">
+    <h5 class="card-header">{{item.CountryName}}</h5>
+    <div class="card-body">
+      <p class="card-text">Country Code : {{item.CountryCode}}</p>
+      <p class="card-text">Country Capital : {{item.Capital}}</p>
+      <p class="card-text">Country Region : {{item.ContinentName}}</p>
+
+    </div>
+  </div>
+  <br>
+</div>
